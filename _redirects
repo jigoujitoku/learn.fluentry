@@ -1,5 +1,5 @@
 # Jisho API Proxy (bypasses CORS)
-/kurutta-kotoba/api/jisho   https://jisho.org/api/v1/search/words   200!
+/kurutta-kotoba/api/jisho   https://jisho.org/api/v1/search/   200!
 
 # Direct static asset rewrites to the public subfolder
 /kurutta-kotoba/css/*       /kurutta-kotoba/public/css/:splat       200
