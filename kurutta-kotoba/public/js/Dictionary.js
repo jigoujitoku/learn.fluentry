@@ -1,18 +1,29 @@
 class DictionaryManager {
   constructor() {
     this.checkDictionary = [];
-    this.guessedWords = []; // Pohranjuje objekte: { input, word, reading, meaning }
+    this.guessedWords = [];
     this.wordMap = new Map();
     this.pw = "";
     this.counter = 0;
   }
 
+  // Bi-directional path fallback (handles files with or without .txt extension)
   async loadFile(path) {
     try {
-      const response = await fetch(path);
+      let response = await fetch(path);
+
+      // If initial fetch fails, try the inverse extension path
       if (!response.ok) {
-        throw new Error(`Failed to load asset: ${path}`);
+        const altPath = path.endsWith('.txt') 
+          ? path.slice(0, -4) 
+          : path + '.txt';
+        response = await fetch(altPath);
       }
+
+      if (!response.ok) {
+        throw new Error(`Failed to load asset from ${path}`);
+      }
+
       const text = await response.text();
       return text
         .split(/\r?\n/)

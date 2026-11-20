@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const LANG_CONFIG = {
     0: { dicName: 'resources/letters_kanji', checkDicName: 'resources/dictionary_jap.txt' },
-    1: { dicName: 'resources/letters_eng.txt', checkDicName: 'resources/dictionary_eng.txt' },
-    2: { dicName: 'resources/letters_hira', checkDicName: 'resources/dictionary_jap.txt' }
+    1: { dicName: 'resources/letters_eng',   checkDicName: 'resources/dictionary_eng.txt' },
+    2: { dicName: 'resources/letters_hira',  checkDicName: 'resources/dictionary_jap.txt' }
   };
-
+  
   let currentMode = 0;
 
   const btnSubmit = document.getElementById('btn-submit');
