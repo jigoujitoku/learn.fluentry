@@ -1,7 +1,0 @@
-# Proxy Jisho API queries directly through Netlify Edge (bypasses CORS)
-/api/jisho   https://jisho.org/api/v1/search/words   200!
-/kurutta-kotoba/api/jisho   https://jisho.org/api/v1/search/words   200!
-
-# SPA Routing
-/kurutta-kotoba/*    /index.html   200
-/*                   /index.html   200

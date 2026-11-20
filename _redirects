@@ -1,0 +1,7 @@
+# Proxy Jisho API queries through Netlify Edge (bypasses CORS)
+/kurutta-kotoba/api/jisho   https://jisho.org/api/v1/search/words   200!
+
+# Map /kurutta-kotoba requests to /kurutta-kotoba/public/
+/kurutta-kotoba             /kurutta-kotoba/public/index.html      200
+/kurutta-kotoba/            /kurutta-kotoba/public/index.html      200
+/kurutta-kotoba/*           /kurutta-kotoba/public/:splat          200
