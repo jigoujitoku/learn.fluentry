@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluentry Learn Hub | Research-Backed Language Tools</title>
+  <style>
+    :root {
+      /* Manchester Institute & Fluentry Color Palette */
+      --burgundy-primary: #581825;
+      --burgundy-dark: #3b0e17;
+      --burgundy-light: #732232;
+      --gold-accent: #d4af37;
+      --sand-bg: #f9f6f0;
+      --card-bg: #ffffff;
+      --text-main: #1f1f1f;
+      --text-muted: #555555;
+      --border-color: #e2dacd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--sand-bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.25rem;
+    }
+
+    /* Institution Branding Header */
+    .brand-header {
+      width: 100%;
+      max-width: 960px;
+      text-align: center;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .institute-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--burgundy-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .tagline-sub {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gold-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1.hub-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--burgundy-dark);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    p.intro-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Academic Research Highlight Section */
+    .research-callout {
+      background-color: var(--card-bg);
+      border-left: 4px solid var(--burgundy-primary);
+      border-radius: 0.5rem;
+      padding: 1.5rem 2rem;
+      max-width: 960px;
+      width: 100%;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .research-callout h3 {
+      font-size: 1.15rem;
+      color: var(--burgundy-primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .research-callout p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    /* Project Cards Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(88, 24, 37, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(88, 24, 37, 0.08);
+      border-color: var(--burgundy-light);
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 0.725rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-live {
+      background: #e6f4ea;
+      color: #137333;
+    }
+
+    .status-dev {
+      background: #fef7e0;
+      color: #b06000;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--burgundy-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .card-subtitle {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gold-accent);
+      margin-bottom: 1rem;
+    }
+
+    .card-body {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .research-note {
+      font-size: 0.825rem;
+      background: var(--sand-bg);
+      padding: 0.6rem 0.8rem;
+      border-radius: 0.375rem;
+      color: var(--burgundy-dark);
+      margin-top: 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.375rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--burgundy-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--burgundy-light);
+    }
+
+    .btn-disabled {
+      background-color: #e0e0e0;
+      color: #888888;
+      cursor: not-allowed;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--burgundy-primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Brand Banner -->
+  <div class="brand-header">
+    <div class="institute-title">Manchester Institute for East Asian Languages</div>
+    <div class="tagline-sub">Fluency Begins Here</div>
+    <h1 class="hub-title">Fluentry Learn Hub</h1>
+    <p class="intro-text">
+      Interactive, research-informed digital applications designed to accelerate Japanese and East Asian language acquisition through computational linguistics, corpus analysis, and memory algorithms.
+    </p>
+  </div>
+
+  <!-- Academic Background Note -->
+  <section class="research-callout">
+    <h3>🎓 Academic Research & Pedagogical Foundation</h3>
+    <p>
+      Each tool in the Learn Hub is developed directly from published empirical research in Computer-Assisted Language Learning (CALL). By combining computational modeling, error analysis of second-language learners, and adaptive algorithms, these applications turn complex linguistic structures into intuitive digital practice.
+    </p>
+  </section>
+
+  <!-- Projects Grid -->
+  <main class="grid">
+
+    <!-- Mini Doushi -->
+    <article class="card">
+      <span class="status-badge status-live">Live Tool</span>
+      <div>
+        <h2 class="card-title">Mini Doushi</h2>
+        <div class="card-subtitle">ミニ動詞 ・ Japanese Conjugation Trainer</div>
+        <p class="card-body">
+          A systematic drill application for mastering Japanese verb and adjective inflections (A1–A2 levels). Designed to build rapid, accurate morphosyntactic recall under classroom and self-study conditions.
+        </p>
+        <div class="research-note">
+          <strong>Research Base:</strong> Built on error-analysis data collected from university learners to isolate and address common conjugation stumbling blocks <em>(Librenjak et al., MIPRO / CALL)</em>.
+        </div>
+      </div>
+      <a href="/minidoushi/" class="btn btn-primary" style="margin-top: 1.5rem;">Launch Mini Doushi &rarr;</a>
+    </article>
+
+    <!-- Kurutta Kotoba -->
+    <article class="card">
+      <span class="status-badge status-live">Live Tool</span>
+      <div>
+        <h2 class="card-title">Kurutta Kotoba</h2>
+        <div class="card-subtitle">狂った言葉 ・ Kanji & Word Puzzle</div>
+        <p class="card-body">
+          A fast-paced interactive puzzle game where learners connect kanji, hiragana, and morphological roots under time constraints to reinforce intuitive word formation and vocabulary recognition.
+        </p>
+        <div class="research-note">
+          <strong>Research Base:</strong> Integrates native-language mnemonic association and spaced repetition principles <em>(Librenjak, Digital Resources for Learning Japanese)</em>.
+        </div>
+      </div>
+      <a href="/kurutta-kotoba/" class="btn btn-primary" style="margin-top: 1.5rem;">Launch Kurutta Kotoba &rarr;</a>
+    </article>
+
+    <!-- Kanji Sorter -->
+    <article class="card">
+      <span class="status-badge status-dev">In Development</span>
+      <div>
+        <h2 class="card-title">Kanji Sorter</h2>
+        <div class="card-subtitle">漢字ソーター ・ Expert System & Learning Optimizer</div>
+        <p class="card-body">
+          An adaptive optimization tool that calculates individual character "learning cost" by analyzing stroke complexity, component decomposition, frequency across media, and semantic clusters.
+        </p>
+        <div class="research-note">
+          <strong>Research Base:</strong> Based on PhD research introducing an expert system using topological sorting algorithms to determine the most efficient kanji learning sequence <em>(Librenjak, Silva Iaponicarum & EAJS)</em>.
+        </div>
+      </div>
+      <span class="btn btn-disabled" style="margin-top: 1.5rem;">Coming Soon</span>
+    </article>
+
+  </main>
+
+  <footer>
+    &copy; Fluentry / Manchester Institute for East Asian Languages. Return to <a href="https://fluentry.co.uk">fluentry.co.uk</a>.
+  </footer>
+
+</body>
+</html>

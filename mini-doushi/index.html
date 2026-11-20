@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Primary Meta Tags -->
+    <title data-i18n="app_title">MiniDoushi - Japanese Grammar Drills</title>
+    <meta name="title" content="MiniDoushi - Free Japanese Grammar & Conjugation Drills | Fluentry">
+    <meta name="description" content="Master Japanese verb and adjective conjugations with free interactive drills by Genki textbook lesson. Created by Sara L, language teacher & founder of Fluentry.">
+    <meta name="author" content="Sara L / Fluentry Manchester Institute for East Asian Languages">
+    <meta name="keywords" content="Japanese grammar, verb conjugation, Genki lessons, Japanese practice, Fluentry, learn Japanese, Japanese flashcards">
+  
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learn.fluentry.co.uk/mini-doushi">
+    <meta property="og:title" content="MiniDoushi - Free Japanese Grammar Drills">
+    <meta property="og:description" content="Practice Japanese verb and adjective conjugations by Genki lesson. Free, interactive, and mobile-friendly tool built by Fluentry.">
+    <meta property="og:image" content="https://learn.fluentry.co.uk/mini-doushi/og-image.png">
+  
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://learn.fluentry.co.uk/mini-doushi">
+    <meta property="twitter:title" content="MiniDoushi - Free Japanese Grammar Drills">
+    <meta property="twitter:description" content="Practice Japanese verb and adjective conjugations by Genki lesson. Free, interactive, and mobile-friendly tool built by Fluentry.">
+    <meta property="twitter:image" content="https://learn.fluentry.co.uk/mini-doushi/og-image.png">
+  
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+
+<div class="container-wrapper">
+  <!-- Main Application Window -->
+  <div class="app-window">
+    <nav class="nav-bar">
+      <div class="nav-group-left">
+        <div class="nav-item">
+          <button class="nav-btn active" id="btn-mode-verbs" data-i18n="nav_verbs">Verbs</button>
+        </div>
+        <div class="nav-item">
+          <button class="nav-btn" id="btn-mode-adjectives" data-i18n="nav_adjectives">Adjectives</button>
+        </div>
+
+        <!-- Dropdown with Checkboxes for Genki Lessons -->
+        <div class="nav-item">
+          <button class="nav-btn" id="lbl-lessons-dropdown">Select Vocabulary ▼</button>
+          <div class="dropdown-menu checkbox-dropdown" id="lesson-checkbox-menu">
+            <div class="dropdown-actions">
+              <button class="btn-action-small" id="btn-select-all">Select all</button>
+              <button class="btn-action-small" id="btn-reset-all">Reset</button>
+            </div>
+            <div class="checkbox-scroll-area">
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="3" checked> Genki Lesson 3</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="4" checked> Genki Lesson 4</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="5" checked> Genki Lesson 5</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="6" checked> Genki Lesson 6</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="7" checked> Genki Lesson 7</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="8" checked> Genki Lesson 8</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="9" checked> Genki Lesson 9</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="10" checked> Genki Lesson 10</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="11" checked> Genki Lesson 11</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="12" checked> Genki Lesson 12</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="13" checked> Genki Lesson 13</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="14" checked> Genki Lesson 14</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="15" checked> Genki Lesson 15</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="16" checked> Genki Lesson 16</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="17" checked> Genki Lesson 17</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="18" checked> Genki Lesson 18</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="19" checked> Genki Lesson 19 (Sonkeigo)</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="20" checked> Genki Lesson 20 (Kenjougo)</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="21" checked> Genki Lesson 21</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="22" checked> Genki Lesson 22</label>
+              <label class="checkbox-item"><input type="checkbox" class="filter-lesson" value="23" checked> Genki Lesson 23</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Grammar Form Selector -->
+        <div class="nav-item">
+          <select class="lang-select grammar-select" id="grammar-form-select"></select>
+        </div>
+      </div>
+
+      <div class="nav-group-right">
+        <label class="kanji-toggle-label">
+          <input type="checkbox" id="kanji-toggle">
+          <span id="lbl-kanji-toggle">Kanji: OFF</span>
+        </label>
+        <div class="lang-switch">
+          <select class="lang-select" id="lang-select">
+            <option value="en" selected>English</option>
+            <option value="hr">Hrvatski</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Quiz Main Card -->
+    <div class="main-content">
+      <div class="prompt-text" id="prompt-instruction">Conjugate word into: 1. Polite Present Affirmative (-masu) - Lessons 3, 4, 5</div>
+      <div class="target-word" id="target-word">たべる</div>
+      <div class="target-meaning" id="target-meaning">(to eat)</div>
+
+      <div class="input-group">
+        <input type="text" class="answer-input" id="answer-input" placeholder="Type answer in hiragana or romaji..." autocomplete="off">
+        <button class="btn-submit" id="btn-check">Check</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-area"></div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <span id="stat-total">Total: 0</span>
+      <span id="stat-correct">Correct: 0</span>
+      <span id="stat-wrong">Errors: 0</span>
+      <span id="stat-accuracy">Accuracy: 0%</span>
+    </div>
+  </div>
+
+  <!-- Collapsible Mini Dictionary Section -->
+  <div class="dictionary-window">
+    <div class="dictionary-header">
+      <div class="dictionary-title-group">
+        <h3 id="lbl-dictionary-title">Mini Dictionary (Selected Vocabulary)</h3>
+        <span class="dictionary-badge" id="lbl-dict-count">0 words</span>
+      </div>
+      <div class="dictionary-controls">
+        <input type="text" id="dict-search-input" class="dict-search-input" placeholder="Search vocabulary..." autocomplete="off">
+        <button class="btn-toggle" id="btn-toggle-dictionary">Show ▼</button>
+      </div>
+    </div>
+    <div class="dictionary-content collapsed" id="dictionary-content">
+      <div id="dictionary-grid"></div>
+    </div>
+  </div>
+
+  <!-- Error Log Section -->
+  <div class="mistakes-window">
+    <div class="mistakes-header">
+      <h3 id="lbl-mistakes-title">Mistakes Log for Learning</h3>
+      <button class="btn-clear" id="btn-clear-mistakes">Clear log</button>
+    </div>
+    <div class="mistakes-list" id="mistakes-list">
+      <p class="empty-mistakes-msg" id="msg-no-mistakes">No mistakes recorded yet.</p>
+    </div>
+  </div>
+
+  <!-- Author & Branding Footer -->
+  <footer class="app-footer">
+    <p>
+      Made by <strong>Fluentry - Manchester Institute for East Asian Languages</strong> (2026).
+    </p>
+    <p>
+      Created by Sara L, language teacher and founder of Fluentry. 
+      This web app is an updated, improved version of Mini Doushi, a Java desktop tool originally developed during her postgraduate research at the University of Zagreb. 
+      Free to use, made with care to help you master Japanese grammar!
+    </p>
+    <p class="footer-ps">
+      P.S. Check out our website <a href="https://fluentry.co.uk" target="_blank" rel="noopener noreferrer">fluentry.co.uk</a> for language classes and more!
+    </p>
+  </footer>
+</div>
+
+<script src="js/conjugator.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

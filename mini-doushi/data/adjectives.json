@@ -1,0 +1,524 @@
+[
+  {
+    "id": "ii",
+    "kanji": "いい",
+    "reading": "いい",
+    "romaji": "ii",
+    "group": "i-adj-irregular",
+    "lesson": 3,
+    "meaning": { "hr": "dobar", "en": "good" }
+  },
+  {
+    "id": "kakkoii",
+    "kanji": "かっこいい",
+    "reading": "かっこいい",
+    "romaji": "kakkoii",
+    "group": "i-adj-irregular",
+    "lesson": 3,
+    "meaning": { "hr": "zgodan / cool", "en": "good-looking / cool" }
+  },
+  {
+    "id": "atama_ga_ii",
+    "kanji": "頭がいい",
+    "reading": "あたまがいい",
+    "romaji": "atama ga ii",
+    "group": "i-adj-irregular",
+    "lesson": 7,
+    "meaning": { "hr": "pametan", "en": "smart / bright" }
+  },
+  {
+    "id": "atarashii",
+    "kanji": "新しい",
+    "reading": "あたらしい",
+    "romaji": "atarashii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "nov", "en": "new" }
+  },
+  {
+    "id": "atsui",
+    "kanji": "暑い",
+    "reading": "あつい",
+    "romaji": "atsui",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "vruć (vrijeme)", "en": "hot (weather)" }
+  },
+  {
+    "id": "isogashii",
+    "kanji": "忙しい",
+    "reading": "いそがしい",
+    "romaji": "isogashii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "zauzet", "en": "busy" }
+  },
+  {
+    "id": "ookii",
+    "kanji": "大きい",
+    "reading": "おおきい",
+    "romaji": "ookii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "velik", "en": "large / big" }
+  },
+  {
+    "id": "omoshiroi",
+    "kanji": "面白い",
+    "reading": "おもしろい",
+    "romaji": "omoshiroi",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "zanimljiv / zabavan", "en": "interesting / funny" }
+  },
+  {
+    "id": "kowai",
+    "kanji": "怖い",
+    "reading": "こわい",
+    "romaji": "kowai",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "strašan", "en": "scary" }
+  },
+  {
+    "id": "samui",
+    "kanji": "寒い",
+    "reading": "さむい",
+    "romaji": "samui",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "hladan (vrijeme)", "en": "cold (weather)" }
+  },
+  {
+    "id": "tanoshii",
+    "kanji": "楽しい",
+    "reading": "たのしい",
+    "romaji": "tanoshii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "zabavan / ugodan", "en": "fun / enjoyable" }
+  },
+  {
+    "id": "chiisai",
+    "kanji": "小さい",
+    "reading": "ちいさい",
+    "romaji": "chiisai",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "mali", "en": "small" }
+  },
+  {
+    "id": "tsumaranai",
+    "kanji": "つまらない",
+    "reading": "つまらない",
+    "romaji": "tsumaranai",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "dosadan", "en": "boring" }
+  },
+  {
+    "id": "furui",
+    "kanji": "古い",
+    "reading": "ふるい",
+    "romaji": "furui",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "star (predmet)", "en": "old (thing)" }
+  },
+  {
+    "id": "muzukashii",
+    "kanji": "難しい",
+    "reading": "むずかしい",
+    "romaji": "muzukashii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "težak", "en": "difficult" }
+  },
+  {
+    "id": "yasashii",
+    "kanji": "易しい",
+    "reading": "やさしい",
+    "romaji": "yasashii",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "lak / jednostavan", "en": "easy" }
+  },
+  {
+    "id": "yasui",
+    "kanji": "安い",
+    "reading": "やすい",
+    "romaji": "yasui",
+    "group": "i-adj",
+    "lesson": 3,
+    "meaning": { "hr": "jeftin", "en": "cheap" }
+  },
+  {
+    "id": "kirai",
+    "kanji": "嫌い",
+    "reading": "きらい",
+    "romaji": "kirai",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "mrski / nevoljen", "en": "disliked" }
+  },
+  {
+    "id": "kirei",
+    "kanji": "きれい",
+    "reading": "きれい",
+    "romaji": "kirei",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "lijep / čist", "en": "beautiful / clean" }
+  },
+  {
+    "id": "genki",
+    "kanji": "元気",
+    "reading": "げんき",
+    "romaji": "genki",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "zdrav / energičan", "en": "healthy" }
+  },
+  {
+    "id": "shizuka",
+    "kanji": "静か",
+    "reading": "しずか",
+    "romaji": "shizuka",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "tih", "en": "quiet" }
+  },
+  {
+    "id": "suki",
+    "kanji": "好き",
+    "reading": "すき",
+    "romaji": "suki",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "drag / omiljen", "en": "liked" }
+  },
+  {
+    "id": "daikirai",
+    "kanji": "大嫌い",
+    "reading": "だいきらい",
+    "romaji": "daikirai",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "jako mrsk", "en": "hated" }
+  },
+  {
+    "id": "daisuki",
+    "kanji": "大好き",
+    "reading": "だいすき",
+    "romaji": "daisuki",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "jako drag", "en": "loved" }
+  },
+  {
+    "id": "nigiyaka",
+    "kanji": "にぎやか",
+    "reading": "にぎやか",
+    "romaji": "nigiyaka",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "živahan", "en": "lively" }
+  },
+  {
+    "id": "hima",
+    "kanji": "暇",
+    "reading": "ひま",
+    "romaji": "hima",
+    "group": "na-adj",
+    "lesson": 3,
+    "meaning": { "hr": "slobodan (vrijeme)", "en": "free time" }
+  },
+  {
+    "id": "taihen",
+    "kanji": "大変",
+    "reading": "たいへん",
+    "romaji": "taihen",
+    "group": "na-adj",
+    "lesson": 5,
+    "meaning": { "hr": "naporan / težak", "en": "tough" }
+  },
+  {
+    "id": "kawaii",
+    "kanji": "可愛い",
+    "reading": "かわいい",
+    "romaji": "kawaii",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "sladak", "en": "cute" }
+  },
+  {
+    "id": "se_ga_takai",
+    "kanji": "背が高い",
+    "reading": "せがたかい",
+    "romaji": "se ga takai",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "visok (osoba)", "en": "tall" }
+  },
+  {
+    "id": "se_ga_hikui",
+    "kanji": "背が低い",
+    "reading": "せがひくい",
+    "romaji": "se ga hikui",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "nizak (osoba)", "en": "short" }
+  },
+  {
+    "id": "nagai",
+    "kanji": "長い",
+    "reading": "ながい",
+    "romaji": "nagai",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "dug", "en": "long" }
+  },
+  {
+    "id": "hayai",
+    "kanji": "速い",
+    "reading": "はやい",
+    "romaji": "hayai",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "brz", "en": "fast" }
+  },
+  {
+    "id": "mijikai",
+    "kanji": "短い",
+    "reading": "みじかい",
+    "romaji": "mijikai",
+    "group": "i-adj",
+    "lesson": 7,
+    "meaning": { "hr": "kratak", "en": "short" }
+  },
+  {
+    "id": "shinsetsu",
+    "kanji": "親切",
+    "reading": "しんせつ",
+    "romaji": "shinsetsu",
+    "group": "na-adj",
+    "lesson": 7,
+    "meaning": { "hr": "ljubazan", "en": "kind" }
+  },
+  {
+    "id": "benri",
+    "kanji": "便利",
+    "reading": "べんり",
+    "romaji": "benri",
+    "group": "na-adj",
+    "lesson": 7,
+    "meaning": { "hr": "praktičan", "en": "convenient" }
+  },
+  {
+    "id": "jouzu",
+    "kanji": "上手",
+    "reading": "じょうず",
+    "romaji": "jouzu",
+    "group": "na-adj",
+    "lesson": 8,
+    "meaning": { "hr": "vješt", "en": "skillful" }
+  },
+  {
+    "id": "heta",
+    "kanji": "下手",
+    "reading": "へた",
+    "romaji": "heta",
+    "group": "na-adj",
+    "lesson": 8,
+    "meaning": { "hr": "nevješt", "en": "clumsy" }
+  },
+  {
+    "id": "yuumei",
+    "kanji": "有名",
+    "reading": "ゆうめい",
+    "romaji": "yuumei",
+    "group": "na-adj",
+    "lesson": 9,
+    "meaning": { "hr": "poznat", "en": "famous" }
+  },
+  {
+    "id": "aoi",
+    "kanji": "青い",
+    "reading": "あおい",
+    "romaji": "aoi",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "plav", "en": "blue" }
+  },
+  {
+    "id": "akai",
+    "kanji": "赤い",
+    "reading": "あかい",
+    "romaji": "akai",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "crven", "en": "red" }
+  },
+  {
+    "id": "kuroi",
+    "kanji": "黒い",
+    "reading": "くろい",
+    "romaji": "kuroi",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "crn", "en": "black" }
+  },
+  {
+    "id": "sabishii",
+    "kanji": "寂しい",
+    "reading": "さびしい",
+    "romaji": "sabishii",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "usamljen", "en": "lonely" }
+  },
+  {
+    "id": "shiroi",
+    "kanji": "白い",
+    "reading": "しろい",
+    "romaji": "shiroi",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "bijel", "en": "white" }
+  },
+  {
+    "id": "wakai",
+    "kanji": "若い",
+    "reading": "わかい",
+    "romaji": "wakai",
+    "group": "i-adj",
+    "lesson": 9,
+    "meaning": { "hr": "mlad", "en": "young" }
+  },
+  {
+    "id": "ijiwaru",
+    "kanji": "意地悪",
+    "reading": "いじわる",
+    "romaji": "ijiwaru",
+    "group": "na-adj",
+    "lesson": 9,
+    "meaning": { "hr": "zločest", "en": "mean" }
+  },
+  {
+    "id": "atatakai",
+    "kanji": "暖かい",
+    "reading": "あたたかい",
+    "romaji": "atatakai",
+    "group": "i-adj",
+    "lesson": 10,
+    "meaning": { "hr": "topao (vrijeme)", "en": "warm" }
+  },
+  {
+    "id": "osoi",
+    "kanji": "遅い",
+    "reading": "おそい",
+    "romaji": "osoi",
+    "group": "i-adj",
+    "lesson": 10,
+    "meaning": { "hr": "spor / kasno", "en": "slow / late" }
+  },
+  {
+    "id": "suzushii",
+    "kanji": "涼しい",
+    "reading": "すずしい",
+    "romaji": "suzushii",
+    "group": "i-adj",
+    "lesson": 10,
+    "meaning": { "hr": "svjež", "en": "cool" }
+  },
+  {
+    "id": "tsumetai",
+    "kanji": "冷たい",
+    "reading": "つめたい",
+    "romaji": "tsumetai",
+    "group": "i-adj",
+    "lesson": 10,
+    "meaning": { "hr": "hladan (stvar)", "en": "cold (thing)" }
+  },
+  {
+    "id": "nemui",
+    "kanji": "眠い",
+    "reading": "ねむい",
+    "romaji": "nemui",
+    "group": "i-adj",
+    "lesson": 10,
+    "meaning": { "hr": "pospan", "en": "sleepy" }
+  },
+  {
+    "id": "kantan",
+    "kanji": "簡単",
+    "reading": "かんたん",
+    "romaji": "kantan",
+    "group": "na-adj",
+    "lesson": 10,
+    "meaning": { "hr": "jednostavan", "en": "simple" }
+  },
+  {
+    "id": "amai",
+    "kanji": "甘い",
+    "reading": "あまい",
+    "romaji": "amai",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "sladak", "en": "sweet" }
+  },
+  {
+    "id": "itai",
+    "kanji": "痛い",
+    "reading": "いたい",
+    "romaji": "itai",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "bolan", "en": "painful" }
+  },
+  {
+    "id": "ooi",
+    "kanji": "多い",
+    "reading": "おおい",
+    "romaji": "ooi",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "mnogo", "en": "many" }
+  },
+  {
+    "id": "semai",
+    "kanji": "狭い",
+    "reading": "せまい",
+    "romaji": "semai",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "tijesan", "en": "cramped" }
+  },
+  {
+    "id": "tsugou_ga_warui",
+    "kanji": "都合が悪い",
+    "reading": "つごうがわるい",
+    "romaji": "tsugou ga warui",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "neodgovarajući", "en": "inconvenient" }
+  },
+  {
+    "id": "warui",
+    "kanji": "悪い",
+    "reading": "わるい",
+    "romaji": "warui",
+    "group": "i-adj",
+    "lesson": 12,
+    "meaning": { "hr": "loš", "en": "bad" }
+  },
+  {
+    "id": "suteki",
+    "kanji": "素敵",
+    "reading": "すてき",
+    "romaji": "suteki",
+    "group": "na-adj",
+    "lesson": 12,
+    "meaning": { "hr": "divan", "en": "fine / splendid" }
+  }
+]

@@ -1,0 +1,1397 @@
+[
+  {
+    "id": 1,
+    "kanji": "行く",
+    "reading": "いく",
+    "romaji": "iku",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to go", "hr": "ići" }
+  },
+  {
+    "id": 2,
+    "kanji": "帰る",
+    "reading": "かえる",
+    "romaji": "kaeru",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to return / go back", "hr": "vratiti se" }
+  },
+  {
+    "id": 3,
+    "kanji": "聞く",
+    "reading": "きく",
+    "romaji": "kiku",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to listen / hear", "hr": "slušati / čuti" }
+  },
+  {
+    "id": 4,
+    "kanji": "飲む",
+    "reading": "のむ",
+    "romaji": "nomu",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to drink", "hr": "piti" }
+  },
+  {
+    "id": 5,
+    "kanji": "話す",
+    "reading": "はなす",
+    "romaji": "hanasu",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to speak / talk", "hr": "govoriti / razgovarati" }
+  },
+  {
+    "id": 6,
+    "kanji": "読む",
+    "reading": "よむ",
+    "romaji": "yomu",
+    "group": "godan",
+    "lesson": 3,
+    "meaning": { "en": "to read", "hr": "čitati" }
+  },
+  {
+    "id": 7,
+    "kanji": "起きる",
+    "reading": "おきる",
+    "romaji": "okiru",
+    "group": "ichidan",
+    "lesson": 3,
+    "meaning": { "en": "to get up", "hr": "ustati" }
+  },
+  {
+    "id": 8,
+    "kanji": "食べる",
+    "reading": "たべる",
+    "romaji": "taberu",
+    "group": "ichidan",
+    "lesson": 3,
+    "meaning": { "en": "to eat", "hr": "jesti" }
+  },
+  {
+    "id": 9,
+    "kanji": "寝る",
+    "reading": "ねる",
+    "romaji": "neru",
+    "group": "ichidan",
+    "lesson": 3,
+    "meaning": { "en": "to sleep / go to sleep", "hr": "spavati / ići spavati" }
+  },
+  {
+    "id": 10,
+    "kanji": "見る",
+    "reading": "みる",
+    "romaji": "miru",
+    "group": "ichidan",
+    "lesson": 3,
+    "meaning": { "en": "to see / watch", "hr": "gledati / vidjeti" }
+  },
+  {
+    "id": 11,
+    "kanji": "来る",
+    "reading": "くる",
+    "romaji": "kuru",
+    "group": "irregular-kuru",
+    "lesson": 3,
+    "meaning": { "en": "to come", "hr": "doći" }
+  },
+  {
+    "id": 12,
+    "kanji": "する",
+    "reading": "する",
+    "romaji": "suru",
+    "group": "irregular-suru",
+    "lesson": 3,
+    "meaning": { "en": "to do", "hr": "raditi / činiti" }
+  },
+  {
+    "id": 13,
+    "kanji": "勉強する",
+    "reading": "べんきょうする",
+    "romaji": "benkyou suru",
+    "group": "irregular-suru",
+    "lesson": 3,
+    "meaning": { "en": "to study", "hr": "učiti / studirati" }
+  },
+  {
+    "id": 14,
+    "kanji": "会う",
+    "reading": "あう",
+    "romaji": "au",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to meet", "hr": "sresti / upoznati" }
+  },
+  {
+    "id": 15,
+    "kanji": "ある",
+    "reading": "ある",
+    "romaji": "aru",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to exist (inanimate)", "hr": "biti / nalaziti se (neživo)" }
+  },
+  {
+    "id": 16,
+    "kanji": "買う",
+    "reading": "かう",
+    "romaji": "kau",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to buy", "hr": "kupiti" }
+  },
+  {
+    "id": 17,
+    "kanji": "書く",
+    "reading": "かく",
+    "romaji": "kaku",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to write", "hr": "pisati" }
+  },
+  {
+    "id": 18,
+    "kanji": "撮る",
+    "reading": "とる",
+    "romaji": "toru",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to take (a photo)", "hr": "fotografirati / snimiti" }
+  },
+  {
+    "id": 19,
+    "kanji": "待つ",
+    "reading": "まつ",
+    "romaji": "matsu",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to wait", "hr": "čekati" }
+  },
+  {
+    "id": 20,
+    "kanji": "分かる",
+    "reading": "わかる",
+    "romaji": "wakaru",
+    "group": "godan",
+    "lesson": 4,
+    "meaning": { "en": "to understand", "hr": "razumjeti" }
+  },
+  {
+    "id": 21,
+    "kanji": "いる",
+    "reading": "いる",
+    "romaji": "iru",
+    "group": "ichidan",
+    "lesson": 4,
+    "meaning": { "en": "to exist (animate)", "hr": "biti / nalaziti se (živo)" }
+  },
+  {
+    "id": 22,
+    "kanji": "泳ぐ",
+    "reading": "およぐ",
+    "romaji": "oyogu",
+    "group": "godan",
+    "lesson": 5,
+    "meaning": { "en": "to swim", "hr": "plivati" }
+  },
+  {
+    "id": 23,
+    "kanji": "乗る",
+    "reading": "のる",
+    "romaji": "noru",
+    "group": "godan",
+    "lesson": 5,
+    "meaning": { "en": "to ride / board", "hr": "voziti se / ukrcati se" }
+  },
+  {
+    "id": 24,
+    "kanji": "やる",
+    "reading": "やる",
+    "romaji": "yaru",
+    "group": "godan",
+    "lesson": 5,
+    "meaning": { "en": "to do / perform", "hr": "raditi / učiniti" }
+  },
+  {
+    "id": 25,
+    "kanji": "出かける",
+    "reading": "でかける",
+    "romaji": "dekakeru",
+    "group": "ichidan",
+    "lesson": 5,
+    "meaning": { "en": "to go out", "hr": "izaći / izbivati" }
+  },
+  {
+    "id": 26,
+    "kanji": "遊ぶ",
+    "reading": "あそぶ",
+    "romaji": "asobu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to play / hang out", "hr": "igrati se / družiti se" }
+  },
+  {
+    "id": 27,
+    "kanji": "急ぐ",
+    "reading": "いそぐ",
+    "romaji": "isogu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to hurry", "hr": "žuriti" }
+  },
+  {
+    "id": 28,
+    "kanji": "お風呂に入る",
+    "reading": "おふろにはいる",
+    "romaji": "ofuro ni hairu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to take a bath", "hr": "kupati se u kadi" }
+  },
+  {
+    "id": 29,
+    "kanji": "返す",
+    "reading": "かえす",
+    "romaji": "kaesu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to return (an object)", "hr": "vratiti (nešto)" }
+  },
+  {
+    "id": 30,
+    "kanji": "消す",
+    "reading": "けす",
+    "romaji": "kesu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to turn off / erase", "hr": "ugasiti / izbrisati" }
+  },
+  {
+    "id": 31,
+    "kanji": "死ぬ",
+    "reading": "しぬ",
+    "romaji": "shinu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to die", "hr": "umrijeti" }
+  },
+  {
+    "id": 32,
+    "kanji": "座る",
+    "reading": "すわる",
+    "romaji": "suwaru",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to sit down", "hr": "sjesti" }
+  },
+  {
+    "id": 33,
+    "kanji": "使う",
+    "reading": "つかう",
+    "romaji": "tsukau",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to use", "hr": "koristiti" }
+  },
+  {
+    "id": 34,
+    "kanji": "手伝う",
+    "reading": "てつだう",
+    "romaji": "tetsudau",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to help", "hr": "pomoći" }
+  },
+  {
+    "id": 35,
+    "kanji": "入る",
+    "reading": "はいる",
+    "romaji": "hairu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to enter", "hr": "ući" }
+  },
+  {
+    "id": 36,
+    "kanji": "持つ",
+    "reading": "もつ",
+    "romaji": "motsu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to hold / carry", "hr": "držati / nositi" }
+  },
+  {
+    "id": 37,
+    "kanji": "休む",
+    "reading": "やすむ",
+    "romaji": "yasumu",
+    "group": "godan",
+    "lesson": 6,
+    "meaning": { "en": "to rest / be absent", "hr": "odmarati se / izbivati" }
+  },
+  {
+    "id": 38,
+    "kanji": "開ける",
+    "reading": "あける",
+    "romaji": "akeru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to open", "hr": "otvoriti" }
+  },
+  {
+    "id": 39,
+    "kanji": "教える",
+    "reading": "おしえる",
+    "romaji": "oshieru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to teach / instruct", "hr": "podučavati / objasniti" }
+  },
+  {
+    "id": 40,
+    "kanji": "降りる",
+    "reading": "おりる",
+    "romaji": "oriru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to get off", "hr": "sići / iskrcati se" }
+  },
+  {
+    "id": 41,
+    "kanji": "借りる",
+    "reading": "かりる",
+    "romaji": "kariru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to borrow", "hr": "posuditi (od koga)" }
+  },
+  {
+    "id": 42,
+    "kanji": "閉める",
+    "reading": "しめる",
+    "romaji": "shimeru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to close", "hr": "zatvoriti" }
+  },
+  {
+    "id": 43,
+    "kanji": "つける",
+    "reading": "つける",
+    "romaji": "tsukeru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to turn on", "hr": "upaliti" }
+  },
+  {
+    "id": 44,
+    "kanji": "電話をかける",
+    "reading": "でんわをかける",
+    "romaji": "denwa o kakeru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to make a phone call", "hr": "telefonirati" }
+  },
+  {
+    "id": 45,
+    "kanji": "忘れる",
+    "reading": "わすれる",
+    "romaji": "wasureru",
+    "group": "ichidan",
+    "lesson": 6,
+    "meaning": { "en": "to forget", "hr": "zaboraviti" }
+  },
+  {
+    "id": 46,
+    "kanji": "連れてくる",
+    "reading": "つれてくる",
+    "romaji": "tsurete kuru",
+    "group": "irregular-kuru",
+    "lesson": 6,
+    "meaning": { "en": "to bring (a person)", "hr": "dovesti (nekoga)" }
+  },
+  {
+    "id": 47,
+    "kanji": "持ってくる",
+    "reading": "もってくる",
+    "romaji": "motte kuru",
+    "group": "irregular-kuru",
+    "lesson": 6,
+    "meaning": { "en": "to bring (a thing)", "hr": "donijeti (nešto)" }
+  },
+  {
+    "id": 48,
+    "kanji": "歌う",
+    "reading": "うたう",
+    "romaji": "utau",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to sing", "hr": "pjevati" }
+  },
+  {
+    "id": 49,
+    "kanji": "かぶる",
+    "reading": "かぶる",
+    "romaji": "kaburu",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to put on (a hat)", "hr": "staviti (kapu/šešir)" }
+  },
+  {
+    "id": 50,
+    "kanji": "知る",
+    "reading": "しる",
+    "romaji": "shiru",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to know", "hr": "znati" }
+  },
+  {
+    "id": 51,
+    "kanji": "住む",
+    "reading": "すむ",
+    "romaji": "sumu",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to live / reside", "hr": "živjeti / stanovati" }
+  },
+  {
+    "id": 52,
+    "kanji": "履く",
+    "reading": "はく",
+    "romaji": "haku",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to put on (items below waist)", "hr": "obući (hlače/cipele)" }
+  },
+  {
+    "id": 53,
+    "kanji": "太る",
+    "reading": "ふとる",
+    "romaji": "futoru",
+    "group": "godan",
+    "lesson": 7,
+    "meaning": { "en": "to gain weight", "hr": "udebljati se" }
+  },
+  {
+    "id": 54,
+    "kanji": "眼鏡をかける",
+    "reading": "めがねをかける",
+    "romaji": "megane o kakeru",
+    "group": "ichidan",
+    "lesson": 7,
+    "meaning": { "en": "to put on glasses", "hr": "staviti naočale" }
+  },
+  {
+    "id": 55,
+    "kanji": "着る",
+    "reading": "きる",
+    "romaji": "kiru",
+    "group": "ichidan",
+    "lesson": 7,
+    "meaning": { "en": "to put on (clothes above waist)", "hr": "obući (gornji dio odjeće)" }
+  },
+  {
+    "id": 56,
+    "kanji": "痩せる",
+    "reading": "やせる",
+    "romaji": "yaseru",
+    "group": "ichidan",
+    "lesson": 7,
+    "meaning": { "en": "to lose weight", "hr": "smršaviti" }
+  },
+  {
+    "id": 57,
+    "kanji": "結婚する",
+    "reading": "けっこんする",
+    "romaji": "kekkon suru",
+    "group": "irregular-suru",
+    "lesson": 7,
+    "meaning": { "en": "to get married", "hr": "vjenčati se" }
+  },
+  {
+    "id": 58,
+    "kanji": "雨が降る",
+    "reading": "あめがふる",
+    "romaji": "ame ga furu",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to rain", "hr": "padati (kiša)" }
+  },
+  {
+    "id": 59,
+    "kanji": "洗う",
+    "reading": "あらう",
+    "romaji": "arau",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to wash", "hr": "prati" }
+  },
+  {
+    "id": 60,
+    "kanji": "言う",
+    "reading": "いう",
+    "romaji": "iu",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to say", "hr": "reći" }
+  },
+  {
+    "id": 61,
+    "kanji": "要る",
+    "reading": "いる",
+    "romaji": "iru",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to need", "hr": "trebati" }
+  },
+  {
+    "id": 62,
+    "kanji": "遅くなる",
+    "reading": "おそくなる",
+    "romaji": "osokunaru",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to be late", "hr": "kasniti" }
+  },
+  {
+    "id": 63,
+    "kanji": "思う",
+    "reading": "おもう",
+    "romaji": "omou",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to think", "hr": "misliti" }
+  },
+  {
+    "id": 64,
+    "kanji": "切る",
+    "reading": "きる",
+    "romaji": "kiru",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to cut", "hr": "rezati" }
+  },
+  {
+    "id": 65,
+    "kanji": "作る",
+    "reading": "つくる",
+    "romaji": "tsukuru",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to make", "hr": "napraviti / izraditi" }
+  },
+  {
+    "id": 66,
+    "kanji": "持っていく",
+    "reading": "もっていく",
+    "romaji": "motte iku",
+    "group": "godan",
+    "lesson": 8,
+    "meaning": { "en": "to take (a thing)", "hr": "odnijeti (nešto)" }
+  },
+  {
+    "id": 67,
+    "kanji": "じろじろ見る",
+    "reading": "じろじろみる",
+    "romaji": "jirojiro miru",
+    "group": "ichidan",
+    "lesson": 8,
+    "meaning": { "en": "to stare", "hr": "buljiti" }
+  },
+  {
+    "id": 68,
+    "kanji": "捨てる",
+    "reading": "すてる",
+    "romaji": "suteru",
+    "group": "ichidan",
+    "lesson": 8,
+    "meaning": { "en": "to throw away", "hr": "baciti" }
+  },
+  {
+    "id": 69,
+    "kanji": "始める",
+    "reading": "はじめる",
+    "romaji": "hajimeru",
+    "group": "ichidan",
+    "lesson": 8,
+    "meaning": { "en": "to start / begin", "hr": "započeti" }
+  },
+  {
+    "id": 70,
+    "kanji": "運転する",
+    "reading": "うんてんする",
+    "romaji": "unten suru",
+    "group": "irregular-suru",
+    "lesson": 8,
+    "meaning": { "en": "to drive", "hr": "voziti" }
+  },
+  {
+    "id": 71,
+    "kanji": "洗濯する",
+    "reading": "せんたくする",
+    "romaji": "sentaku suru",
+    "group": "irregular-suru",
+    "lesson": 8,
+    "meaning": { "en": "to do laundry", "hr": "prati rublje" }
+  },
+  {
+    "id": 72,
+    "kanji": "掃除する",
+    "reading": "そうじする",
+    "romaji": "souji suru",
+    "group": "irregular-suru",
+    "lesson": 8,
+    "meaning": { "en": "to clean", "hr": "čistiti" }
+  },
+  {
+    "id": 73,
+    "kanji": "料理する",
+    "reading": "りょうりする",
+    "romaji": "ryouri suru",
+    "group": "irregular-suru",
+    "lesson": 8,
+    "meaning": { "en": "to cook", "hr": "kuhati" }
+  },
+  {
+    "id": 74,
+    "kanji": "踊る",
+    "reading": "おどる",
+    "romaji": "odoru",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to dance", "hr": "plesati" }
+  },
+  {
+    "id": 75,
+    "kanji": "終わる",
+    "reading": "おわる",
+    "romaji": "owaru",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to end / finish", "hr": "završiti" }
+  },
+  {
+    "id": 76,
+    "kanji": "人気がある",
+    "reading": "にんきがある",
+    "romaji": "ninki ga aru",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to be popular", "hr": "biti popularan" }
+  },
+  {
+    "id": 77,
+    "kanji": "始まる",
+    "reading": "はじまる",
+    "romaji": "hajimaru",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to begin (intransitive)", "hr": "početi" }
+  },
+  {
+    "id": 78,
+    "kanji": "弾く",
+    "reading": "ひく",
+    "romaji": "hiku",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to play (string instrument/piano)", "hr": "svirati (klavir/gitaru)" }
+  },
+  {
+    "id": 79,
+    "kanji": "もらう",
+    "reading": "もらう",
+    "romaji": "morau",
+    "group": "godan",
+    "lesson": 9,
+    "meaning": { "en": "to receive", "hr": "dobiti / primiti" }
+  },
+  {
+    "id": 80,
+    "kanji": "覚える",
+    "reading": "おぼえる",
+    "romaji": "oboeru",
+    "group": "ichidan",
+    "lesson": 9,
+    "meaning": { "en": "to memorize / remember", "hr": "zapamtiti" }
+  },
+  {
+    "id": 81,
+    "kanji": "出る",
+    "reading": "でる",
+    "romaji": "deru",
+    "group": "ichidan",
+    "lesson": 9,
+    "meaning": { "en": "to exit / appear / attend", "hr": "izaći / pojaviti se" }
+  },
+  {
+    "id": 82,
+    "kanji": "運動する",
+    "reading": "うんどうする",
+    "romaji": "undou suru",
+    "group": "irregular-suru",
+    "lesson": 9,
+    "meaning": { "en": "to exercise", "hr": "vježbati" }
+  },
+  {
+    "id": 83,
+    "kanji": "散歩する",
+    "reading": "さんぽする",
+    "romaji": "sanpo suru",
+    "group": "irregular-suru",
+    "lesson": 9,
+    "meaning": { "en": "to take a walk", "hr": "šetati" }
+  },
+  {
+    "id": 84,
+    "kanji": "かかる",
+    "reading": "かかる",
+    "romaji": "kakaru",
+    "group": "godan",
+    "lesson": 10,
+    "meaning": { "en": "to take (time/money)", "hr": "trajati / koštati" }
+  },
+  {
+    "id": 85,
+    "kanji": "泊まる",
+    "reading": "とまる",
+    "romaji": "tomaru",
+    "group": "godan",
+    "lesson": 10,
+    "meaning": { "en": "to stay overnight", "hr": "odsjesti / prenoćiti" }
+  },
+  {
+    "id": 86,
+    "kanji": "なる",
+    "reading": "なる",
+    "romaji": "naru",
+    "group": "godan",
+    "lesson": 10,
+    "meaning": { "en": "to become", "hr": "postati" }
+  },
+  {
+    "id": 87,
+    "kanji": "払う",
+    "reading": "はらう",
+    "romaji": "harau",
+    "group": "godan",
+    "lesson": 10,
+    "meaning": { "en": "to pay", "hr": "platiti" }
+  },
+  {
+    "id": 88,
+    "kanji": "決める",
+    "reading": "きめる",
+    "romaji": "kimeru",
+    "group": "ichidan",
+    "lesson": 10,
+    "meaning": { "en": "to decide", "hr": "odlučiti" }
+  },
+  {
+    "id": 89,
+    "kanji": "旅行する",
+    "reading": "りょこうする",
+    "romaji": "ryokou suru",
+    "group": "irregular-suru",
+    "lesson": 10,
+    "meaning": { "en": "to travel", "hr": "putovati" }
+  },
+  {
+    "id": 90,
+    "kanji": "予約する",
+    "reading": "よやくする",
+    "romaji": "yoyaku suru",
+    "group": "irregular-suru",
+    "lesson": 10,
+    "meaning": { "en": "to reserve / book", "hr": "rezervirati" }
+  },
+  {
+    "id": 91,
+    "kanji": "泣く",
+    "reading": "なく",
+    "romaji": "naku",
+    "group": "godan",
+    "lesson": 11,
+    "meaning": { "en": "to cry", "hr": "plakati" }
+  },
+  {
+    "id": 92,
+    "kanji": "売る",
+    "reading": "うる",
+    "romaji": "uru",
+    "group": "godan",
+    "lesson": 11,
+    "meaning": { "en": "to sell", "hr": "prodati" }
+  },
+  {
+    "id": 93,
+    "kanji": "下ろす",
+    "reading": "おろす",
+    "romaji": "orosu",
+    "group": "godan",
+    "lesson": 11,
+    "meaning": { "en": "to withdraw (money)", "hr": "podignuti (novac)" }
+  },
+  {
+    "id": 94,
+    "kanji": "探す",
+    "reading": "さがす",
+    "romaji": "sagasu",
+    "group": "godan",
+    "lesson": 11,
+    "meaning": { "en": "to look for", "hr": "tražiti" }
+  },
+  {
+    "id": 95,
+    "kanji": "建てる",
+    "reading": "たてる",
+    "romaji": "tateru",
+    "group": "ichidan",
+    "lesson": 11,
+    "meaning": { "en": "to build", "hr": "graditi" }
+  },
+  {
+    "id": 96,
+    "kanji": "送る",
+    "reading": "おくる",
+    "romaji": "okuru",
+    "group": "godan",
+    "lesson": 12,
+    "meaning": { "en": "to send", "hr": "poslati" }
+  },
+  {
+    "id": 97,
+    "kanji": "似合う",
+    "reading": "にあう",
+    "romaji": "niau",
+    "group": "godan",
+    "lesson": 12,
+    "meaning": { "en": "to look good on / suit", "hr": "pristajati / dobro stajati" }
+  },
+  {
+    "id": 98,
+    "kanji": "あきらめる",
+    "reading": "あきらめる",
+    "romaji": "akirameru",
+    "group": "ichidan",
+    "lesson": 12,
+    "meaning": { "en": "to give up", "hr": "odustati" }
+  },
+  {
+    "id": 99,
+    "kanji": "あげる",
+    "reading": "あげる",
+    "romaji": "ageru",
+    "group": "ichidan",
+    "lesson": 12,
+    "meaning": { "en": "to give", "hr": "dati" }
+  },
+  {
+    "id": 100,
+    "kanji": "くれる",
+    "reading": "くれる",
+    "romaji": "kureru",
+    "group": "ichidan",
+    "lesson": 12,
+    "meaning": { "en": "to give (to me)", "hr": "dati (meni)" }
+  },
+  {
+    "id": 101,
+    "kanji": "紹介する",
+    "reading": "しょうかいする",
+    "romaji": "shoukai suru",
+    "group": "irregular-suru",
+    "lesson": 12,
+    "meaning": { "en": "to introduce", "hr": "predstaviti" }
+  },
+  {
+    "id": 102,
+    "kanji": "開く",
+    "reading": "あく",
+    "romaji": "aku",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to open (intransitive)", "hr": "otvoriti se" }
+  },
+  {
+    "id": 103,
+    "kanji": "謝る",
+    "reading": "あやまる",
+    "romaji": "ayamaru",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to apologize", "hr": "ispričati se" }
+  },
+  {
+    "id": 104,
+    "kanji": "押す",
+    "reading": "おす",
+    "romaji": "osu",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to press / push", "hr": "pritisnuti / gurati" }
+  },
+  {
+    "id": 105,
+    "kanji": "落とす",
+    "reading": "おとす",
+    "romaji": "otosu",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to drop", "hr": "ispustiti" }
+  },
+  {
+    "id": 106,
+    "kanji": "転ぶ",
+    "reading": "ころぶ",
+    "romaji": "korobu",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to fall down", "hr": "pasti" }
+  },
+  {
+    "id": 107,
+    "kanji": "壊す",
+    "reading": "こわす",
+    "romaji": "kowasu",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to break", "hr": "razbiti / pokvariti" }
+  },
+  {
+    "id": 108,
+    "kanji": "咲く",
+    "reading": "さく",
+    "romaji": "saku",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to bloom", "hr": "cvjetati" }
+  },
+  {
+    "id": 109,
+    "kanji": "助かる",
+    "reading": "たすかる",
+    "romaji": "tasukaru",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to be saved / helped", "hr": "biti spašen" }
+  },
+  {
+    "id": 110,
+    "kanji": "頼む",
+    "reading": "たのむ",
+    "romaji": "tanomu",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to ask a favor / request", "hr": "zamoliti" }
+  },
+  {
+    "id": 111,
+    "kanji": "着く",
+    "reading": "つく",
+    "romaji": "tsuku",
+    "group": "godan",
+    "lesson": 13,
+    "meaning": { "en": "to arrive", "hr": "stići / doputovati" }
+  },
+  {
+    "id": 112,
+    "kanji": "祈る",
+    "reading": "いのる",
+    "romaji": "inoru",
+    "group": "godan",
+    "lesson": 14,
+    "meaning": { "en": "to pray", "hr": "moliti se" }
+  },
+  {
+    "id": 113,
+    "kanji": "勝つ",
+    "reading": "かつ",
+    "romaji": "katsu",
+    "group": "godan",
+    "lesson": 14,
+    "meaning": { "en": "to win", "hr": "pobijediti" }
+  },
+  {
+    "id": 114,
+    "kanji": "負ける",
+    "reading": "まける",
+    "romaji": "makeru",
+    "group": "ichidan",
+    "lesson": 14,
+    "meaning": { "en": "to lose (a match)", "hr": "izgubiti" }
+  },
+  {
+    "id": 115,
+    "kanji": "続ける",
+    "reading": "つづける",
+    "romaji": "tsuzukeru",
+    "group": "ichidan",
+    "lesson": 14,
+    "meaning": { "en": "to continue", "hr": "nastaviti" }
+  },
+  {
+    "id": 116,
+    "kanji": "感謝する",
+    "reading": "かんしゃする",
+    "romaji": "kansha suru",
+    "group": "irregular-suru",
+    "lesson": 14,
+    "meaning": { "en": "to thank / appreciate", "hr": "zahvaliti" }
+  },
+  {
+    "id": 117,
+    "kanji": "受ける",
+    "reading": "うける",
+    "romaji": "ukeru",
+    "group": "ichidan",
+    "lesson": 15,
+    "meaning": { "en": "to take (an exam)", "hr": "polagati (ispit)" }
+  },
+  {
+    "id": 118,
+    "kanji": "変える",
+    "reading": "かえる",
+    "romaji": "kaeru",
+    "group": "ichidan",
+    "lesson": 15,
+    "meaning": { "en": "to change", "hr": "promijeniti" }
+  },
+  {
+    "id": 119,
+    "kanji": "外す",
+    "reading": "はずす",
+    "romaji": "hazusu",
+    "group": "godan",
+    "lesson": 15,
+    "meaning": { "en": "to unfasten / remove", "hr": "skinuti / ukloniti" }
+  },
+  {
+    "id": 120,
+    "kanji": "申し込む",
+    "reading": "もうしこむ",
+    "romaji": "moushikomu",
+    "group": "godan",
+    "lesson": 15,
+    "meaning": { "en": "to apply for", "hr": "prijaviti se" }
+  },
+  {
+    "id": 121,
+    "kanji": "選ぶ",
+    "reading": "えらぶ",
+    "romaji": "erabu",
+    "group": "godan",
+    "lesson": 16,
+    "meaning": { "en": "to choose / select", "hr": "izabrati" }
+  },
+  {
+    "id": 122,
+    "kanji": "お湯を沸かす",
+    "reading": "おゆをわかす",
+    "romaji": "oyu o wakasu",
+    "group": "godan",
+    "lesson": 16,
+    "meaning": { "en": "to boil water", "hr": "zavriti vodu" }
+  },
+  {
+    "id": 123,
+    "kanji": "溶かす",
+    "reading": "とかす",
+    "romaji": "tokasu",
+    "group": "godan",
+    "lesson": 16,
+    "meaning": { "en": "to melt / dissolve", "hr": "rastopiti" }
+  },
+  {
+    "id": 124,
+    "kanji": "混ぜる",
+    "reading": "まぜる",
+    "romaji": "mazeru",
+    "group": "ichidan",
+    "lesson": 16,
+    "meaning": { "en": "to mix", "hr": "pomiješati" }
+  },
+  {
+    "id": 125,
+    "kanji": "動く",
+    "reading": "うごく",
+    "romaji": "ugoku",
+    "group": "godan",
+    "lesson": 17,
+    "meaning": { "en": "to move", "hr": "kretati se / pomaknuti se" }
+  },
+  {
+    "id": 126,
+    "kanji": "驚く",
+    "reading": "おどろく",
+    "romaji": "odoroku",
+    "group": "godan",
+    "lesson": 17,
+    "meaning": { "en": "to be surprised", "hr": "iznenaditi se" }
+  },
+  {
+    "id": 127,
+    "kanji": "困る",
+    "reading": "こまる",
+    "romaji": "komaru",
+    "group": "godan",
+    "lesson": 17,
+    "meaning": { "en": "to be in trouble", "hr": "biti u nevolji" }
+  },
+  {
+    "id": 128,
+    "kanji": "叱る",
+    "reading": "しかる",
+    "romaji": "shikaru",
+    "group": "godan",
+    "lesson": 17,
+    "meaning": { "en": "to scold", "hr": "koriti / grditi" }
+  },
+  {
+    "id": 129,
+    "kanji": "止む",
+    "reading": "やむ",
+    "romaji": "yamu",
+    "group": "godan",
+    "lesson": 17,
+    "meaning": { "en": "to stop (rain/wind)", "hr": "prestati (kiša/vjetar)" }
+  },
+  {
+    "id": 130,
+    "kanji": "預ける",
+    "reading": "あずける",
+    "romaji": "azukeru",
+    "group": "ichidan",
+    "lesson": 18,
+    "meaning": { "en": "to deposit / entrust", "hr": "povjeriti / pohraniti" }
+  },
+  {
+    "id": 131,
+    "kanji": "片付ける",
+    "reading": "かたづける",
+    "romaji": "katazukeru",
+    "group": "ichidan",
+    "lesson": 18,
+    "meaning": { "en": "to tidy up", "hr": "pospremiti" }
+  },
+  {
+    "id": 132,
+    "kanji": "比べる",
+    "reading": "くらべる",
+    "romaji": "kuraberu",
+    "group": "ichidan",
+    "lesson": 18,
+    "meaning": { "en": "to compare", "hr": "usporediti" }
+  },
+  {
+    "id": 133,
+    "kanji": "調べる",
+    "reading": "しらべる",
+    "romaji": "shiraberu",
+    "group": "ichidan",
+    "lesson": 18,
+    "meaning": { "en": "to investigate / search", "hr": "istražiti / provjeriti" }
+  },
+  {
+    "id": 134,
+    "kanji": "いらっしゃる",
+    "reading": "いらっしゃる",
+    "romaji": "irassharu",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably be/go/come", "hr": "biti/ići/doći (honorativno)" }
+  },
+  {
+    "id": 135,
+    "kanji": "おっしゃる",
+    "reading": "おっしゃる",
+    "romaji": "ossharu",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably say", "hr": "reći (honorativno)" }
+  },
+  {
+    "id": 136,
+    "kanji": "なさる",
+    "reading": "なさる",
+    "romaji": "nasaru",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably do", "hr": "raditi (honorativno)" }
+  },
+  {
+    "id": 137,
+    "kanji": "くださる",
+    "reading": "くださる",
+    "romaji": "kudasaru",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably give", "hr": "dati (honorativno)" }
+  },
+  {
+    "id": 138,
+    "kanji": "ご覧になる",
+    "reading": "ごらんになる",
+    "romaji": "goran ni naru",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably look at", "hr": "gledati (honorativno)" }
+  },
+  {
+    "id": 139,
+    "kanji": "召し上がる",
+    "reading": "めしあがる",
+    "romaji": "meshiagaru",
+    "group": "godan",
+    "lesson": 19,
+    "meaning": { "en": "to honorably eat/drink", "hr": "jesti/piti (honorativno)" }
+  },
+  {
+    "id": 140,
+    "kanji": "お邪魔する",
+    "reading": "おじゃまする",
+    "romaji": "ojama suru",
+    "group": "irregular-suru",
+    "lesson": 20,
+    "meaning": { "en": "to visit / intrude", "hr": "posjetiti / smetati" }
+  },
+  {
+    "id": 141,
+    "kanji": "差し上げる",
+    "reading": "さしあげる",
+    "romaji": "sashiageru",
+    "group": "ichidan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly give", "hr": "darovati (skromno)" }
+  },
+  {
+    "id": 142,
+    "kanji": "伺う",
+    "reading": "うかがう",
+    "romaji": "ukagau",
+    "group": "godan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly visit / ask", "hr": "posjetiti / pitati (skromno)" }
+  },
+  {
+    "id": 143,
+    "kanji": "いただく",
+    "reading": "いただく",
+    "romaji": "itadaku",
+    "group": "godan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly receive/eat/drink", "hr": "primiti/jesti/piti (skromno)" }
+  },
+  {
+    "id": 144,
+    "kanji": "いたす",
+    "reading": "いたす",
+    "romaji": "itasu",
+    "group": "godan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly do", "hr": "raditi (skromno)" }
+  },
+  {
+    "id": 145,
+    "kanji": "参る",
+    "reading": "まいる",
+    "romaji": "mairu",
+    "group": "godan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly go/come", "hr": "ići/doći (skromno)" }
+  },
+  {
+    "id": 146,
+    "kanji": "おる",
+    "reading": "おる",
+    "romaji": "oru",
+    "group": "godan",
+    "lesson": 20,
+    "meaning": { "en": "to humbly be", "hr": "biti (skromno)" }
+  },
+  {
+    "id": 147,
+    "kanji": "ござる",
+    "reading": "ござる",
+    "romaji": "gozaru",
+    "group": "godan",
+    "lesson": 21,
+    "meaning": { "en": "to exist (polite)", "hr": "biti / postojati (vljudno)" }
+  },
+  {
+    "id": 148,
+    "kanji": "気に入る",
+    "reading": "きにいる",
+    "romaji": "kiniiru",
+    "group": "godan",
+    "lesson": 21,
+    "meaning": { "en": "to like / take a liking to", "hr": "sviđati se" }
+  },
+  {
+    "id": 149,
+    "kanji": "伝える",
+    "reading": "つたえる",
+    "romaji": "tsutaeru",
+    "group": "ichidan",
+    "lesson": 21,
+    "meaning": { "en": "to convey / tell", "hr": "prenijeti / poručiti" }
+  },
+  {
+    "id": 150,
+    "kanji": "お待たせする",
+    "reading": "おまたせする",
+    "romaji": "omatase suru",
+    "group": "irregular-suru",
+    "lesson": 21,
+    "meaning": { "en": "to keep someone waiting", "hr": "dati koga čekati" }
+  },
+  {
+    "id": 151,
+    "kanji": "守る",
+    "reading": "まもる",
+    "romaji": "mamoru",
+    "group": "godan",
+    "lesson": 22,
+    "meaning": { "en": "to protect / keep a promise", "hr": "štititi / održati obećanje" }
+  },
+  {
+    "id": 152,
+    "kanji": "助ける",
+    "reading": "たすける",
+    "romaji": "tasukeru",
+    "group": "ichidan",
+    "lesson": 22,
+    "meaning": { "en": "to help / save", "hr": "pomoći / spasiti" }
+  },
+  {
+    "id": 153,
+    "kanji": "成功する",
+    "reading": "せいこうする",
+    "romaji": "seikou suru",
+    "group": "irregular-suru",
+    "lesson": 22,
+    "meaning": { "en": "to succeed", "hr": "uspjeti" }
+  },
+  {
+    "id": 154,
+    "kanji": "許す",
+    "reading": "ゆるす",
+    "romaji": "yurusu",
+    "group": "godan",
+    "lesson": 23,
+    "meaning": { "en": "to forgive / permit", "hr": "oprostiti / dopustiti" }
+  },
+  {
+    "id": 155,
+    "kanji": "応援する",
+    "reading": "おうえんする",
+    "romaji": "ouen suru",
+    "group": "irregular-suru",
+    "lesson": 23,
+    "meaning": { "en": "to cheer for / support", "hr": "navijati / podupirati" }
+  }
+]

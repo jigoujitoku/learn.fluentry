@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>狂った言葉 || Kurutta Kotoba</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-brand">
+      <span class="logo-jp">狂った言葉</span>
+      <span class="logo-sub">Kurutta Kotoba</span>
+    </div>
+
+    <!-- Mode Selector Tabs -->
+    <nav class="mode-tabs">
+      <button id="lang-kanji" class="tab-btn active" data-lang="0">漢字 Kanji</button>
+      <button id="lang-hira" class="tab-btn" data-lang="2">ひらがな Hiragana</button>
+      <button id="lang-eng" class="tab-btn" data-lang="1">English</button>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button id="btn-help-uputa" class="icon-btn" title="Uputa">❓ Uputa</button>
+      <button id="btn-help-about" class="icon-btn" title="O aplikaciji">ℹ️ O nama</button>
+    </div>
+  </header>
+
+  <!-- Main App Layout -->
+  <main class="app-layout">
+    
+    <!-- Left Column: Active Game Area -->
+    <section class="game-column">
+      
+      <!-- Current Selection & Action Controls -->
+      <div class="word-input-card">
+        <div class="input-header">
+          <span class="input-label">Trenutna riječ / Selection:</span>
+          <span id="input-status" class="status-badge"></span>
+        </div>
+        
+        <div id="japanska-rijec" class="word-preview-display"></div>
+
+        <div class="action-buttons-row">
+          <button id="btn-submit" class="btn btn-submit" title="Shortcut: Alt + S">
+            <span>✓</span> Predaj riječ <kbd>Alt+S</kbd>
+          </button>
+          <button id="btn-reset" class="btn btn-reset" title="Shortcut: Alt + R">
+            <span>✕</span> Poništi <kbd>Alt+R</kbd>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4x4 Grid Board -->
+      <div class="board-wrapper">
+        <div id="board-grid" class="grid-4x4">
+          <!-- Tile buttons injected dynamically by Board.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Timer, Definition & Learned Words Sidebar -->
+    <aside class="sidebar-column">
+      
+      <!-- Timer Card -->
+      <div id="timer-panel" class="card timer-card" title="Klikni za pauzu / nastavak">
+        <div class="timer-header">
+          <span class="timer-title">⏱️ Preostalo vrijeme</span>
+          <span class="timer-hint">Klikni za pauzu • Spacebar</span>
+        </div>
+        <div id="timer-display" class="timer-digits">03:00:000</div>
+      </div>
+
+      <!-- Dictionary Lookup Result Card -->
+      <div class="card dictionary-card">
+        <div class="card-title">📖 Jisho Rječnik / Definition</div>
+        <div id="citanje" class="word-reading"></div>
+        <div id="engleska-rijec" class="word-meaning">
+          Pritisnite <strong>Razmak (Space)</strong> za početak tajmera ili odaberite slova i kliknite <strong>Predaj riječ</strong>.
+        </div>
+      </div>
+
+      <!-- Vocabulary Study Box (Learned Words) -->
+      <div class="card study-card">
+        <div class="card-title-bar">
+          <div class="title-with-badge">
+            <span class="card-title">✨ Naučene riječi</span>
+            <span id="found-count-badge" class="count-badge">0</span>
+          </div>
+          <button id="btn-export-anki" class="btn-export-sm" title="Kopiraj popis za Anki (CSV)">📋 Kopiraj Anki</button>
+        </div>
+        <div id="prev-words-container" class="vocab-cards-list">
+          <div class="empty-words-msg">Još nema pronađenih riječi. Složite riječ na ploči i predajte je!</div>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Help Modal Dialog -->
+  <div id="help-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close-btn">&times;</button>
+      <h3 id="modal-title" class="modal-heading"></h3>
+      <div id="modal-body" class="modal-text"></div>
+    </div>
+  </div>
+
+  <!-- App Scripts -->
+  <script src="js/Dictionary.js"></script>
+  <script src="js/JishoGetter.js"></script>
+  <script src="js/CountdownTimer.js"></script>
+  <script src="js/Board.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

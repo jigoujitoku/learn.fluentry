@@ -1,0 +1,17 @@
+{
+  "name": "kurutta-kotoba-web",
+  "version": "1.0.0",
+  "description": "Web port of Kurutta Kotoba (Japanese word puzzle game)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["japanese", "game", "kanji", "hiragana", "boggle"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.9"
+  }
+}
