@@ -1,23 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Configuration for game modes & asset files
-  const LANG_CONFIG = {
-    0: { // Kanji Mode
-      dicName: 'resources/letters_kanji',
-      checkDicName: 'resources/dictionary_jap.txt'
+
+  const I18N = {
+    en: {
+      navHelp: "❓ How to Play",
+      navAbout: "ℹ️ About",
+      selectionLabel: "Current Selection",
+      btnSubmit: "Submit Word",
+      btnReset: "Clear",
+      timerTitle: "⏱️ Time Remaining",
+      timerHint: "Click tile board or press Space to Start/Pause",
+      timerPaused: "PAUSED",
+      timerRunning: "RUNNING",
+      timerFinished: "FINISHED",
+      dictTitle: "📖 Jisho Definition",
+      dictDefault: "Press Space or tap the timer to start, select tiles to form words, and press Enter to submit.",
+      dictNotFound: "Meaning not found in Jisho dictionary.",
+      foundTitle: "✨ Found Vocabulary",
+      btnAnki: "📋 Copy for Anki",
+      emptyWords: "No words found yet. Combine tiles on the board and submit!",
+      helpTitle: "How to Play | Kurutta Kotoba",
+      helpBody: "1. Press Space or tap the timer/board to start the 3-minute game clock.\n\n" +
+                "2. Click/tap letter tiles to select them (highlighted green) and form valid words.\n\n" +
+                "3. Press Enter or click 'Submit Word' to check your word against the dictionary.\n\n" +
+                "4. Use Esc or 'Clear' to deselect tiles.\n\n" +
+                "5. Switch modes anytime (Kanji, Hiragana, English) or press F5 for a fresh tile set.\n\n" +
+                "6. Click 'Copy for Anki' to export all discovered words with meanings directly to your clipboard!",
+      aboutTitle: "About Kurutta Kotoba | Fluentry Learn Hub",
+      aboutBody: "Kurutta Kotoba (狂った言葉 - 'Crazy Words') is an interactive Japanese vocabulary puzzle game originally created in 2016 by Memazija.\n\n" +
+                 "Re-engineered as part of the Fluentry Learn Hub (learn.fluentry.co.uk), this web app helps learners build Japanese kanji intuition, expand active vocabulary, and study effectively through instant Jisho dictionary definitions and Anki flashcard exports.\n\n" +
+                 "Powered by the Jisho.org API. Dedicated to language learners worldwide!"
     },
-    1: { // English Mode
-      dicName: 'resources/letters_eng',
-      checkDicName: 'resources/dictionary_eng.txt'
-    },
-    2: { // Hiragana Mode
-      dicName: 'resources/letters_hira',
-      checkDicName: 'resources/dictionary_jap.txt'
+    hr: {
+      navHelp: "❓ Uputa za igru",
+      navAbout: "ℹ️ O aplikaciji",
+      selectionLabel: "Trenutni odabir",
+      btnSubmit: "Predaj riječ",
+      btnReset: "Poništi",
+      timerTitle: "⏱️ Preostalo vrijeme",
+      timerHint: "Klikni na ploču ili pritisni Razmak za pokretanje/pauzu",
+      timerPaused: "PAUZIRANO",
+      timerRunning: "U TIJEKU",
+      timerFinished: "ISTEKLO",
+      dictTitle: "📖 Jisho Definicija",
+      dictDefault: "Pritisnite Razmak ili tajmer za početak, odaberite slova na ploči i pritisnite Enter za predaju.",
+      dictNotFound: "Značenje nije pronađeno u Jisho rječniku.",
+      foundTitle: "✨ Pronađeni vokabular",
+      btnAnki: "📋 Kopiraj za Anki",
+      emptyWords: "Još nema pronađenih riječi. Složite riječ na ploči i predajte je!",
+      helpTitle: "Uputa za igru | Kurutta Kotoba",
+      helpBody: "1. Pokrenite mjerač vremena (3 min) pritiskom na razmak ili klikom na mjerač.\n\n" +
+                "2. Odaberite slova ili kanjije klikom (označeni zeleno) i složite što više riječi.\n\n" +
+                "3. Pritisnite Enter ili 'Predaj riječ' za provjeru u rječniku.\n\n" +
+                "4. Poništite odabir pritiskom na Esc ili gumb 'Poništi'.\n\n" +
+                "5. Promijenite način rada (Kanji, Hiragana, English) ili pritisnite F5 za novu ploču.\n\n" +
+                "6. Kliknite 'Kopiraj za Anki' za izvoz svih pronađenih riječi sa značenjima!",
+      aboutTitle: "O aplikaciji Kurutta Kotoba | Fluentry Learn Hub",
+      aboutBody: "Kurutta Kotoba (狂った言葉 - 'Lude riječi') je igra slaganja riječi iz kanjija i slova, originalno nastala 2016. godine (autor Memazija).\n\n" +
+                 "Danas je dio Fluentry Learn Hub platforme (learn.fluentry.co.uk), moderna web aplikacija razvijena za jačanje intuicije o kanjijima, širenje vokabulara i lagan izvoz kartica u Anki.\n\n" +
+                 "Aplikacija koristi Jisho.org API. Besplatno za sve učenje japanskog!"
     }
   };
 
-  let currentLang = 0; // Default mode: Kanji
+  window.I18N = I18N;
+  window.currentUiLang = 'en';
 
-  // DOM Element References
+  const LANG_CONFIG = {
+    0: { dicName: 'resources/letters_kanji', checkDicName: 'resources/dictionary_jap.txt' },
+    1: { dicName: 'resources/letters_eng.txt', checkDicName: 'resources/dictionary_eng.txt' },
+    2: { dicName: 'resources/letters_hira', checkDicName: 'resources/dictionary_jap.txt' }
+  };
+
+  let currentMode = 0;
+
   const btnSubmit = document.getElementById('btn-submit');
   const btnReset = document.getElementById('btn-reset');
   const langKanji = document.getElementById('lang-kanji');
@@ -30,89 +84,102 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.getElementById('modal-title');
   const modalBody = document.getElementById('modal-body');
   const timerPanel = document.getElementById('timer-panel');
-  const boardGrid = document.getElementById('board-grid');
+  const timerStateBadge = document.getElementById('timer-status-badge');
+  const uiLangEn = document.getElementById('ui-lang-en');
+  const uiLangHr = document.getElementById('ui-lang-hr');
 
-  // Initialize Countdown Timer (3-minute duration)
   const timer = new window.CountdownTimer('timer-display', {
     onPauseToggle: (isPaused) => {
+      const dict = I18N[window.currentUiLang];
       if (isPaused) {
-        boardGrid.classList.add('hidden');
+        if (timerPanel) timerPanel.classList.remove('running');
+        if (timerStateBadge) timerStateBadge.textContent = dict.timerPaused;
       } else {
-        boardGrid.classList.remove('hidden');
+        if (timerPanel) timerPanel.classList.add('running');
+        if (timerStateBadge) timerStateBadge.textContent = dict.timerRunning;
       }
     },
     onComplete: () => {
-      boardGrid.classList.add('hidden');
-      alert('Vrijeme je isteklo!');
+      const dict = I18N[window.currentUiLang];
+      if (timerPanel) timerPanel.classList.remove('running');
+      if (timerStateBadge) timerStateBadge.textContent = dict.timerFinished;
+      alert(window.currentUiLang === 'hr' ? 'Vrijeme je isteklo!' : 'Time is up!');
     }
   });
 
-  // Launch a new game session with selected language mode
-  async function startGame(langCode = 0) {
-    currentLang = langCode;
-    window.boardManager.currentLanguage = langCode;
+  function setUiLanguage(lang) {
+    window.currentUiLang = lang;
+    const dict = I18N[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        el.textContent = dict[key];
+      }
+    });
+
+    if (uiLangEn) uiLangEn.classList.toggle('active', lang === 'en');
+    if (uiLangHr) uiLangHr.classList.toggle('active', lang === 'hr');
+
+    if (timerStateBadge) {
+      if (timer.isRunning && !timer.isPaused) {
+        timerStateBadge.textContent = dict.timerRunning;
+      } else {
+        timerStateBadge.textContent = dict.timerPaused;
+      }
+    }
+
+    if (window.boardManager) {
+      window.boardManager.updateGuessedWordsDisplay();
+    }
+  }
+
+  if (uiLangEn) uiLangEn.addEventListener('click', () => setUiLanguage('en'));
+  if (uiLangHr) uiLangHr.addEventListener('click', () => setUiLanguage('hr'));
+
+  async function startGame(modeCode = 0) {
+    currentMode = modeCode;
+    window.boardManager.currentLanguage = modeCode;
     window.dictionaryManager.resetState();
     window.jishoGetter.resetState();
     window.boardManager.resetUI();
 
-    const config = LANG_CONFIG[langCode] || LANG_CONFIG[0];
+    [langKanji, langHira, langEng].forEach((btn, idx) => {
+      const targetMode = idx === 0 ? 0 : idx === 1 ? 2 : 1;
+      if (btn) btn.classList.toggle('active', targetMode === modeCode);
+    });
 
-    // Asynchronously load check dictionary & letter dice assets
+    const config = LANG_CONFIG[modeCode] || LANG_CONFIG[0];
     await window.dictionaryManager.setCheckDictionary(config.checkDicName);
     const diceLines = await window.dictionaryManager.loadFile(config.dicName);
 
     if (diceLines.length > 0) {
       const tiles = window.dictionaryManager.generateBoardTiles(diceLines, 4);
       window.boardManager.renderBoard(tiles);
-    } else {
-      console.error('Failed to load letter tiles for path:', config.dicName);
     }
 
     timer.reset();
+    if (timerStateBadge) timerStateBadge.textContent = I18N[window.currentUiLang].timerPaused;
   }
 
-  // Button Action Binding
-  if (btnSubmit) {
-    btnSubmit.addEventListener('click', () => {
-      window.boardManager.submitWord();
-    });
-  }
-
-  if (btnReset) {
-    btnReset.addEventListener('click', () => {
-      window.boardManager.clearSelection();
-    });
-  }
+  if (btnSubmit) btnSubmit.addEventListener('click', () => window.boardManager.submitWord());
+  if (btnReset) btnReset.addEventListener('click', () => window.boardManager.clearSelection());
 
   if (langKanji) langKanji.addEventListener('click', () => startGame(0));
   if (langHira) langHira.addEventListener('click', () => startGame(2));
   if (langEng) langEng.addEventListener('click', () => startGame(1));
 
-  // Help Modals (Replicating Swing JOptionPane behavior)
   if (btnHelpUputa) {
     btnHelpUputa.addEventListener('click', () => {
-      showModal(
-        "Uputa",
-        "1. Pokrenite mjerač vremena stisnuvši razmak. Igra traje tri minute i može se pauzirati klikom na mjerač vremena.\n\n" +
-        "2. Odaberite slova ili kanjije klikom (moraju biti zeleni) i složite što više riječi.\n" +
-        "Moguće je otkazati izbor ponovnim klikom ili otkazati sve pritiskom Alt+R odnosno odgovarajućeg gumba.\n" +
-        "Možete predati i samo jedan kanji, no pokušajte složiti i riječi.\n\n" +
-        "3. Prihvaćene riječi se ispisuju iznad mjerača vremena. Pokušajte ih naći što više.\n\n" +
-        "4. Odaberete li nešto iz izbornika Jezik, započet ćete novu igru. Također možete stisnuti F5 da osvježite izbor slova/kanjija.\n\n" +
-        "5. Ukoliko nešto ne radi kako treba, provjerite internet vezu."
-      );
+      const dict = I18N[window.currentUiLang];
+      showModal(dict.helpTitle, dict.helpBody);
     });
   }
 
   if (btnHelpAbout) {
     btnHelpAbout.addEventListener('click', () => {
-      showModal(
-        "Kurutta Kotoba by Memazija",
-        "Ideja ove igre je razviti intuiciju o slaganju riječi preko kanjija, proširiti vokabular i pobuditi znatiželju u učenju.\n\n" +
-        "Besplatna je za korištenje, ali svakako želimo čuti vašu povratnu informaciju.\n" +
-        "Komentare i pitanja šaljite na memazija@gmail.com.\n\n" +
-        "Ova igra koristi API rječnika Jisho i nije odgovorna za greške u njegovom sadržaju.\nMade in 2016."
-      );
+      const dict = I18N[window.currentUiLang];
+      showModal(dict.aboutTitle, dict.aboutBody);
     });
   }
 
@@ -128,58 +195,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Click on timer panel to toggle pause/resume
   if (timerPanel) {
-    timerPanel.addEventListener('click', () => {
-      timer.togglePause();
-    });
+    timerPanel.addEventListener('click', () => timer.togglePause());
   }
 
-  // Keyboard Shortcuts (MnemonicWorkaround.java equivalent)
   document.addEventListener('keydown', (e) => {
-    // Toggle Timer & Grid visibility on Spacebar
     if (e.code === 'Space' && e.target === document.body) {
       e.preventDefault();
       timer.togglePause();
     }
 
-    // F5: Restart game with current mode
-    if (e.code === 'F5') {
-      e.preventDefault();
-      startGame(currentLang);
-    }
-
-    // Alt + S: Submit word
-    if (e.altKey && (e.code === 'KeyS' || e.key.toLowerCase() === 's')) {
+    if (e.code === 'Enter') {
       e.preventDefault();
       window.boardManager.submitWord();
     }
 
-    // Alt + R: Deselect tiles
-    if (e.altKey && (e.code === 'KeyR' || e.key.toLowerCase() === 'r')) {
+    if (e.code === 'Escape' || (e.altKey && e.code === 'KeyR')) {
       e.preventDefault();
       window.boardManager.clearSelection();
     }
 
-    // Ctrl + K: Kanji mode
-    if (e.ctrlKey && e.code === 'KeyK') {
+    if (e.code === 'F5') {
       e.preventDefault();
-      startGame(0);
-    }
-
-    // Ctrl + H: Hiragana mode
-    if (e.ctrlKey && e.code === 'KeyH') {
-      e.preventDefault();
-      startGame(2);
-    }
-
-    // Ctrl + E: English mode
-    if (e.ctrlKey && e.code === 'KeyE') {
-      e.preventDefault();
-      startGame(1);
+      startGame(currentMode);
     }
   });
 
-  // Launch initial game session in Kanji mode
+  setUiLanguage('en');
   startGame(0);
 });

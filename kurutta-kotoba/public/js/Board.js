@@ -75,11 +75,11 @@ class BoardManager {
   async submitWord() {
     const word = this.getCurrentWord();
     if (!word) {
-      this.showStatus("Nema odabrane riječi!", false);
+      this.showStatus(window.currentUiLang === 'hr' ? "Nema odabrane riječi!" : "No word selected!", false);
       return;
     }
 
-    this.showStatus("Provjera...", true);
+    this.showStatus(window.currentUiLang === 'hr' ? "Provjera..." : "Checking...", true);
 
     let isMatch = window.dictionaryManager.checkWord(word);
     let jishoData = null;
@@ -92,13 +92,17 @@ class BoardManager {
     }
 
     if (isMatch) {
-      this.showStatus("Pronađena riječ!", true);
+      this.showStatus(window.currentUiLang === 'hr' ? "Pronađena riječ!" : "Word found!", true);
 
       if (!jishoData) {
         jishoData = await window.jishoGetter.fetchJishoData(word);
       }
 
-      const meaning = window.jishoGetter.parseMeaning(jishoData) || "Značenje nije pronađeno.";
+      const notFoundText = (window.I18N && window.I18N[window.currentUiLang]) 
+        ? window.I18N[window.currentUiLang].dictNotFound 
+        : "Meaning not found in Jisho dictionary.";
+
+      const meaning = window.jishoGetter.parseMeaning(jishoData) || notFoundText;
       const reading = window.jishoGetter.parseReading(jishoData) || "";
       const jpWord = window.jishoGetter.parseJapanese(jishoData) || word;
 
@@ -108,7 +112,6 @@ class BoardManager {
       if (this.readingWordEl) this.readingWordEl.textContent = reading ? `【 ${reading} 】` : '';
       if (this.englishMeaningEl) this.englishMeaningEl.textContent = meaning;
 
-      // Pohrana bogatog zapisa za učenje
       window.dictionaryManager.addGuessedWord({
         input: word,
         word: jpWord,
@@ -118,7 +121,7 @@ class BoardManager {
 
       this.updateGuessedWordsDisplay();
     } else {
-      this.showStatus(`"${word}" nije u rječniku!`, false);
+      this.showStatus(window.currentUiLang === 'hr' ? `"${word}" nije u rječniku!` : `"${word}" not in dictionary!`, false);
     }
 
     this.clearSelection();
@@ -133,7 +136,10 @@ class BoardManager {
 
     if (this.prevWordsEl) {
       if (words.length === 0) {
-        this.prevWordsEl.innerHTML = `<div class="empty-words-msg">Još nema pronađenih riječi. Složite riječ na ploči i predajte je!</div>`;
+        const emptyMsg = (window.I18N && window.I18N[window.currentUiLang]) 
+          ? window.I18N[window.currentUiLang].emptyWords 
+          : "No words found yet. Combine tiles on the board and submit!";
+        this.prevWordsEl.innerHTML = `<div class="empty-words-msg" data-i18n="emptyWords">${emptyMsg}</div>`;
       } else {
         this.prevWordsEl.innerHTML = words
           .map((item, index) => `
@@ -162,17 +168,18 @@ class BoardManager {
   exportToAnki() {
     const words = window.dictionaryManager.guessedWords;
     if (words.length === 0) {
-      alert("Nema pronađenih riječi za izvoz!");
+      alert(window.currentUiLang === 'hr' ? "Nema pronađenih riječi za izvoz!" : "No found words to export!");
       return;
     }
 
-    // Formatiranje u CSV za Anki (Riječ, Čitanje, Značenje)
     const csvContent = words.map(w => `"${w.word}","${w.reading}","${w.meaning.replace(/"/g, '""')}"`).join('\n');
     
     navigator.clipboard.writeText(csvContent).then(() => {
-      alert(`Kopirano ${words.length} riječi u meduspremnik (TSV/CSV format spreman za Anki import)!`);
+      alert(window.currentUiLang === 'hr' 
+        ? `Kopirano ${words.length} riječi u međuspremnik (za Anki import)!` 
+        : `Copied ${words.length} words to clipboard (for Anki import)!`);
     }).catch(err => {
-      console.error('Neuspješno kopiranje:', err);
+      console.error('Export error:', err);
     });
   }
 
@@ -181,7 +188,10 @@ class BoardManager {
     if (this.japaneseWordEl) this.japaneseWordEl.textContent = '';
     if (this.readingWordEl) this.readingWordEl.textContent = '';
     if (this.englishMeaningEl) {
-      this.englishMeaningEl.textContent = 'Pritisnite Razmak za početak tajmera ili odaberite slova i kliknite Predaj riječ.';
+      const defaultText = (window.I18N && window.I18N[window.currentUiLang]) 
+        ? window.I18N[window.currentUiLang].dictDefault 
+        : "Press Space or tap the timer to start, select tiles to form words, and press Enter to submit.";
+      this.englishMeaningEl.textContent = defaultText;
     }
     if (this.statusEl) {
       this.statusEl.textContent = '';

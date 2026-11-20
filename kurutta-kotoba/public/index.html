@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>狂った言葉 || Kurutta Kotoba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kurutta Kotoba | Fluentry Learn</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +11,12 @@
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- Top App Navigation -->
   <header class="app-header">
     <div class="header-brand">
+      <a href="https://learn.fluentry.co.uk" class="brand-link" target="_blank" rel="noopener">
+        <span class="hub-tag">Fluentry Learn</span>
+      </a>
       <span class="logo-jp">狂った言葉</span>
       <span class="logo-sub">Kurutta Kotoba</span>
     </div>
@@ -25,10 +28,16 @@
       <button id="lang-eng" class="tab-btn" data-lang="1">English</button>
     </nav>
 
-    <!-- Header Actions -->
+    <!-- Header Actions (UI Language + Modals) -->
     <div class="header-actions">
-      <button id="btn-help-uputa" class="icon-btn" title="Uputa">❓ Uputa</button>
-      <button id="btn-help-about" class="icon-btn" title="O aplikaciji">ℹ️ O nama</button>
+      <!-- UI Language Switcher -->
+      <div class="ui-lang-toggle">
+        <button id="ui-lang-en" class="ui-lang-btn active">EN</button>
+        <button id="ui-lang-hr" class="ui-lang-btn">HR</button>
+      </div>
+
+      <button id="btn-help-uputa" class="icon-btn" data-i18n="navHelp">❓ How to Play</button>
+      <button id="btn-help-about" class="icon-btn" data-i18n="navAbout">ℹ️ About</button>
     </div>
   </header>
 
@@ -41,18 +50,18 @@
       <!-- Current Selection & Action Controls -->
       <div class="word-input-card">
         <div class="input-header">
-          <span class="input-label">Trenutna riječ / Selection:</span>
+          <span class="input-label" data-i18n="selectionLabel">Current Selection</span>
           <span id="input-status" class="status-badge"></span>
         </div>
         
         <div id="japanska-rijec" class="word-preview-display"></div>
 
         <div class="action-buttons-row">
-          <button id="btn-submit" class="btn btn-submit" title="Shortcut: Alt + S">
-            <span>✓</span> Predaj riječ <kbd>Alt+S</kbd>
+          <button id="btn-submit" class="btn btn-submit">
+            <span>✓</span> <span data-i18n="btnSubmit">Submit Word</span> <kbd>Enter</kbd>
           </button>
-          <button id="btn-reset" class="btn btn-reset" title="Shortcut: Alt + R">
-            <span>✕</span> Poništi <kbd>Alt+R</kbd>
+          <button id="btn-reset" class="btn btn-reset">
+            <span>✕</span> <span data-i18n="btnReset">Clear</span> <kbd>Esc / Alt+R</kbd>
           </button>
         </div>
       </div>
@@ -60,7 +69,7 @@
       <!-- 4x4 Grid Board -->
       <div class="board-wrapper">
         <div id="board-grid" class="grid-4x4">
-          <!-- Tile buttons injected dynamically by Board.js -->
+          <!-- Tile buttons injected dynamically -->
         </div>
       </div>
     </section>
@@ -68,21 +77,24 @@
     <!-- Right Column: Timer, Definition & Learned Words Sidebar -->
     <aside class="sidebar-column">
       
-      <!-- Timer Card -->
-      <div id="timer-panel" class="card timer-card" title="Klikni za pauzu / nastavak">
-        <div class="timer-header">
-          <span class="timer-title">⏱️ Preostalo vrijeme</span>
-          <span class="timer-hint">Klikni za pauzu • Spacebar</span>
+      <!-- Sleek Modern Timer Card -->
+      <div id="timer-panel" class="card timer-card" title="Click or tap Spacebar to start/pause">
+        <div class="timer-card-body">
+          <div class="timer-header">
+            <span class="timer-title" data-i18n="timerTitle">⏱️ Time Remaining</span>
+            <span id="timer-status-badge" class="timer-state-badge">PAUSED</span>
+          </div>
+          <div id="timer-display" class="timer-digits">03:00.00</div>
+          <div class="timer-footer-hint" data-i18n="timerHint">Click tile board or press Space to Start/Pause</div>
         </div>
-        <div id="timer-display" class="timer-digits">03:00:000</div>
       </div>
 
       <!-- Dictionary Lookup Result Card -->
       <div class="card dictionary-card">
-        <div class="card-title">📖 Jisho Rječnik / Definition</div>
+        <div class="card-title" data-i18n="dictTitle">📖 Jisho Definition</div>
         <div id="citanje" class="word-reading"></div>
-        <div id="engleska-rijec" class="word-meaning">
-          Pritisnite <strong>Razmak (Space)</strong> za početak tajmera ili odaberite slova i kliknite <strong>Predaj riječ</strong>.
+        <div id="engleska-rijec" class="word-meaning" data-i18n="dictDefault">
+          Press Space or tap the timer to start, select tiles to form words, and press Enter to submit.
         </div>
       </div>
 
@@ -90,13 +102,13 @@
       <div class="card study-card">
         <div class="card-title-bar">
           <div class="title-with-badge">
-            <span class="card-title">✨ Naučene riječi</span>
+            <span class="card-title" data-i18n="foundTitle">✨ Found Vocabulary</span>
             <span id="found-count-badge" class="count-badge">0</span>
           </div>
-          <button id="btn-export-anki" class="btn-export-sm" title="Kopiraj popis za Anki (CSV)">📋 Kopiraj Anki</button>
+          <button id="btn-export-anki" class="btn-export-sm" data-i18n="btnAnki">📋 Copy for Anki</button>
         </div>
         <div id="prev-words-container" class="vocab-cards-list">
-          <div class="empty-words-msg">Još nema pronađenih riječi. Složite riječ na ploči i predajte je!</div>
+          <div class="empty-words-msg" data-i18n="emptyWords">No words found yet. Combine tiles on the board and submit!</div>
         </div>
       </div>
 
