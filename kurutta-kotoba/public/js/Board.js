@@ -84,7 +84,8 @@ class BoardManager {
     let isMatch = window.dictionaryManager.checkWord(word);
     let jishoData = null;
 
-    if (!isMatch && this.currentLanguage === 2) {
+    // Direct Jisho API query for Kanji (0), English (1), or Hiragana (2) if local file match fails
+    if (!isMatch) {
       jishoData = await window.jishoGetter.fetchJishoData(word);
       if (jishoData && jishoData.data && jishoData.data.length > 0) {
         isMatch = true;

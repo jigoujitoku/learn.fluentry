@@ -151,7 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const config = LANG_CONFIG[modeCode] || LANG_CONFIG[0];
     await window.dictionaryManager.setCheckDictionary(config.checkDicName);
-    const diceLines = await window.dictionaryManager.loadFile(config.dicName);
+    
+    // Attempt loading file with and without .txt extension
+    let diceLines = await window.dictionaryManager.loadFile(config.dicName);
+    if (diceLines.length === 0 && !config.dicName.endsWith('.txt')) {
+      diceLines = await window.dictionaryManager.loadFile(config.dicName + '.txt');
+    }
 
     if (diceLines.length > 0) {
       const tiles = window.dictionaryManager.generateBoardTiles(diceLines, 4);
