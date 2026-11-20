@@ -8,21 +8,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static assets under both root and subpath
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/kurutta-kotoba', express.static(path.join(__dirname, 'public')));
 
-// Explicitly serve index.html at root route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// Support hosting under subpath /kurutta-kotoba/
-app.get('/kurutta-kotoba/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// Jisho API Proxy Endpoint
-app.get('/api/jisho', (req, res) => {
+// Jisho Proxy Handler
+const handleJishoProxy = (req, res) => {
   const keyword = req.query.keyword;
   if (!keyword) {
     return res.status(400).json({ error: 'Missing keyword parameter' });
@@ -39,22 +30,18 @@ app.get('/api/jisho', (req, res) => {
 
   const request = https.get(jishoUrl, options, (response) => {
     let rawData = '';
-
     response.on('data', (chunk) => { rawData += chunk; });
-
     response.on('end', () => {
       try {
         const parsedData = JSON.parse(rawData);
         res.json(parsedData);
       } catch (e) {
-        console.error('[Proxy] JSON parse error:', e.message);
         res.status(500).json({ error: 'Invalid response from Jisho' });
       }
     });
   });
 
   request.on('error', (err) => {
-    console.error('[Proxy] Request error:', err.message);
     res.status(500).json({ error: 'Failed to connect to Jisho', details: err.message });
   });
 
@@ -62,8 +49,17 @@ app.get('/api/jisho', (req, res) => {
     request.destroy();
     res.status(504).json({ error: 'Jisho request timed out' });
   });
+};
+
+// Bind proxy endpoint to both root and subpath
+app.get('/api/jisho', handleJishoProxy);
+app.get('/kurutta-kotoba/api/jisho', handleJishoProxy);
+
+// Catch-all route to serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Kurutta Kotoba running at http://localhost:${PORT}`);
+  console.log(`Kurutta Kotoba server running at http://localhost:${PORT}`);
 });

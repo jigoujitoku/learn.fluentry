@@ -8,7 +8,8 @@ class JishoGetter {
   // Calls the local server proxy to query Jisho API without CORS issues
   async fetchJishoData(word) {
     if (!word) return null;
-    const url = `/api/jisho?keyword=${encodeURIComponent(word.toLowerCase())}`;
+    // Relative path ensures it queries /kurutta-kotoba/api/jisho on deployment
+    const url = `api/jisho?keyword=${encodeURIComponent(word.toLowerCase())}`;
     
     try {
       const response = await fetch(url);
