@@ -1,20 +1,20 @@
-[build]
-  publish = "public"
-
-# Redirect /kurutta-kotoba to /kurutta-kotoba/ index
-[[redirects]]
-  from = "/kurutta-kotoba"
-  to = "/kurutta-kotoba/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/kurutta-kotoba/*"
-  to = "/kurutta-kotoba/:splat"
-  status = 200
-
-# Proxy Jisho API queries through Netlify Edge to resolve CORS
 [[redirects]]
   from = "/kurutta-kotoba/api/jisho"
   to = "https://jisho.org/api/v1/search/words"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/kurutta-kotoba"
+  to = "/kurutta-kotoba/public/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kurutta-kotoba/"
+  to = "/kurutta-kotoba/public/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kurutta-kotoba/*"
+  to = "/kurutta-kotoba/public/:splat"
+  status = 200
